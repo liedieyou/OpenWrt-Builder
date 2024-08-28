@@ -112,8 +112,10 @@ config_package_add kmod-usb-net-ipheth
 
 # 第三方软件包
 mkdir -p package/custom
-git clone --depth 1  https://github.com/217heidai/OpenWrt-Packages.git package/custom
-clean_packages package/custom
+#修改原代码，把.git下所有文件移动到package/
+#git clone --depth 1  https://github.com/217heidai/OpenWrt-Packages.git package/custom
+#clean_packages package/custom
+git clone --depth 1  https://github.com/217heidai/OpenWrt-Packages.git package
 # golang
 rm -rf feeds/packages/lang/golang
 mv package/custom/golang feeds/packages/lang/
